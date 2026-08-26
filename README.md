@@ -1,7 +1,7 @@
 <!-- markdownlint-disable-next-line MD054 MD013 MD041 -->
 [![coverage badge]][hermeto coverage status] [![container badge]][hermeto container status]
 
-# Hermeto
+# cachi2
 
 A CLI tool that pre-fetches your project's dependencies for [hermetic][],
 network-isolated container builds and produces accurate SBOMs from the
