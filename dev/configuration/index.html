@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../bundler/">
+        <link rel="prev" href="../usage/">
       
       
-        <link rel="next" href="../generic/">
+        <link rel="next" href="../sbom/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>cargo - Hermeto</title>
+        <title>Configuration - Hermeto</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cargo" class="md-skip">
+        <a href="#configuration" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              cargo
+              Configuration
             
           </span>
         </div>
@@ -318,10 +318,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../configuration/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -337,6 +364,164 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Config sources
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspecting-active-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inspecting active configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        http
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        runtime
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proxy-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proxy settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bundler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bundler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gomod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gomod
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pip
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yarn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        yarn
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cargo-npm-and-pnpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cargo, npm and pnpm
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -372,8 +557,6 @@
       
   
   
-    
-  
   
   
     
@@ -386,11 +569,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -411,7 +594,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -454,37 +637,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    cargo
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../cargo/" class="md-nav__link">
         
   
   
@@ -500,87 +656,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prerequisites
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Usage
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hermetic-build" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Hermetic build
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Limitations
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Limitations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#resolver-v3-and-msrv-aware-resolution" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resolver v3 and MSRV-aware resolution
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -844,10 +919,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#modes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        Modes
       
     </span>
   </a>
@@ -855,10 +930,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
+  <a href="#config-sources" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Usage
+        Config sources
       
     </span>
   </a>
@@ -866,10 +941,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hermetic-build" class="md-nav__link">
+  <a href="#inspecting-active-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Hermetic build
+        Inspecting active configuration
       
     </span>
   </a>
@@ -877,22 +952,99 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
+  <a href="#settings" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Limitations
+        Settings
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Limitations">
+    <nav class="md-nav" aria-label="Settings">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#resolver-v3-and-msrv-aware-resolution" class="md-nav__link">
+  <a href="#http" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Resolver v3 and MSRV-aware resolution
+        http
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        runtime
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proxy-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proxy settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bundler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bundler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gomod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gomod
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pip
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yarn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        yarn
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cargo-npm-and-pnpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cargo, npm and pnpm
       
     </span>
   </a>
@@ -921,7 +1073,7 @@
 
 
   
-    <a href="https://github.com/hermetoproject/hermeto/edit/main/docs/cargo.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/hermetoproject/hermeto/edit/main/docs/configuration.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -930,74 +1082,217 @@
     
       
     
-    <a href="https://github.com/hermetoproject/hermeto/raw/main/docs/cargo.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/hermetoproject/hermeto/raw/main/docs/configuration.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="cargo"><a href="https://doc.rust-lang.org/cargo">Cargo</a><a class="headerlink" href="#cargo" title="Permanent link">&para;</a></h1>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>To use Hermeto with Cargo locally, ensure you have the Cargo binary installed on
-your system. Then, ensure that the <strong>Cargo.toml</strong> and <strong>Cargo.lock</strong> are in your
-project directory.</p>
-<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<p>Run the following commands in your terminal to prefetch your project's
-dependencies specified in the <strong>Cargo.lock</strong>. It must be synchronized with the
-<strong>Cargo.toml</strong> file. Otherwise, the command will fail.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>path-to-your-rust-project
-hermeto<span class="w"> </span>fetch-deps<span class="w"> </span>cargo
+<h1 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h1>
+<p>Hermeto's behavior can be tuned with CLI flags, environment variables, and YAML
+config files. This page describes operating modes and available settings.</p>
+<h2 id="modes">Modes<a class="headerlink" href="#modes" title="Permanent link">&para;</a></h2>
+<p>Hermeto currently supports two fetch modes. In <code>strict</code> mode, unmet input
+requirements are errors. In <code>permissive</code> mode, the same conditions produce
+warnings and Hermeto continues, however resulting SBOM may be incomplete or
+inaccurate.</p>
+<p>Set the global CLI option <code>--mode</code> to one of:</p>
+<ul>
+<li><code>strict</code> (default)</li>
+<li><code>permissive</code></li>
+</ul>
+<p>The permissive mode currently suppresses:</p>
+<ul>
+<li>Go <code>vendor</code> directory inconsistencies (see <a href="../gomod/#vendoring">gomod</a>)</li>
+<li><code>Cargo.toml</code> out of sync with <code>Cargo.lock</code></li>
+<li>non-Git sources (e.g., unpacked tarballs)</li>
+</ul>
+<p>Using permissive mode on non-Git trees is mainly useful for smoke tests; SBOM
+accuracy is reduced. See <a href="../usage/#general-process">usage</a> for Git repository
+expectations.</p>
+<p>For details on how permissive violations are tracked in SBOM output, see
+<code>docs/design/permissive-mode.md</code>.</p>
+<h2 id="config-sources">Config sources<a class="headerlink" href="#config-sources" title="Permanent link">&para;</a></h2>
+<p>Hermeto merges settings from several sources, where higher-priority sources
+override lower-priority ones (listed top to bottom):</p>
+<ol>
+<li><strong>Environment variables</strong> — prefix <code>HERMETO_</code>, use <code>__</code> for nested keys
+   (e.g., <code>HERMETO_GOMOD__DOWNLOAD_MAX_TRIES=10</code>)</li>
+<li><strong>CLI</strong> — <code>--config-file path/to/config.yaml</code></li>
+<li><strong>Config files</strong> — loaded automatically when present:</li>
+<li><code>~/.config/hermeto/config.yaml</code></li>
+<li><code>hermeto.yaml</code></li>
+<li><code>.hermeto.yaml</code></li>
+</ol>
+<p>Hermeto only supports YAML config files.</p>
+<h2 id="inspecting-active-configuration">Inspecting active configuration<a class="headerlink" href="#inspecting-active-configuration" title="Permanent link">&para;</a></h2>
+<p>Use <code>hermeto config</code> to display the effective configuration after all sources
+have been merged. Each field is annotated with its corresponding environment
+variable name, and values that differ from defaults are marked with <code>(*)</code>.</p>
+<div class="highlight"><pre><span></span><code>hermeto<span class="w"> </span>config
 </code></pre></div>
-<p>The default output directory is <code>hermeto-output</code>. You can change it by passing
-the <code>--output</code> option for the <code>fetch-deps</code> command. See the help message
-for more information.</p>
-<p>After prefetching the dependencies, you can use the <code>hermeto inject-files</code>
-command to update the <code>.cargo/config.toml</code> file in your project directory. If it
-does not exist, it will be created. The file will contain instructions for Cargo
-to use the prefetched dependencies when compiling a project.</p>
-<p>Use the <code>--for-output-dir</code> option to specify the location where you want to
-mount the <code>hermeto-output</code> in your container build environment. See the next
-section.</p>
-<p><strong>Do not forget to copy <code>.cargo/config.toml</code> when building your container
-image.</strong></p>
-<div class="highlight"><pre><span></span><code>hermeto<span class="w"> </span>inject-files<span class="w"> </span>--for-output-dir<span class="w"> </span>/tmp/hermeto-output<span class="w"> </span>hermeto-output
+<p>To show only values that differ from defaults:</p>
+<div class="highlight"><pre><span></span><code>hermeto<span class="w"> </span>config<span class="w"> </span>--diff
 </code></pre></div>
-<p><em>There are no environment variables that need to be set for the build phase.</em></p>
-<h2 id="hermetic-build">Hermetic build<a class="headerlink" href="#hermetic-build" title="Permanent link">&para;</a></h2>
-<p>After using the <code>fetch-deps</code>, and <code>inject-files</code> commands to set up the
-directory, you can build your project hermetically. Here is an example of a
-Dockerfile with basic instructions to build a Rust project</p>
-<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">docker.io/library/rust:latest</span>
-
-<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
-
-<span class="k">COPY</span><span class="w"> </span>Cargo.toml<span class="w"> </span>Cargo.lock<span class="w"> </span>.cargo<span class="w"> </span>.
-
-<span class="k">RUN</span><span class="w"> </span>cargo<span class="w"> </span>build<span class="w"> </span>--release
+<p>By default, sensitive fields such as <code>proxy_password</code> are redacted. To reveal
+them, pass <code>--raw</code>:</p>
+<div class="highlight"><pre><span></span><code>hermeto<span class="w"> </span>config<span class="w"> </span>--raw
 </code></pre></div>
-<p>Do not forget to mount the <code>hermeto-output</code> directory to the container build
-environment.</p>
-<div class="highlight"><pre><span></span><code>podman<span class="w"> </span>build<span class="w"> </span>.<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--volume<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>realpath<span class="w"> </span>./hermeto-output<span class="k">)</span><span class="s2">"</span>:/tmp/hermeto-output:Z<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--network<span class="w"> </span>none<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--tag<span class="w"> </span>my-rust-app
-</code></pre></div>
-<h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h2>
-<h3 id="resolver-v3-and-msrv-aware-resolution">Resolver v3 and MSRV-aware resolution<a class="headerlink" href="#resolver-v3-and-msrv-aware-resolution" title="Permanent link">&para;</a></h3>
-<p>Hermeto configures Cargo to work without requiring <code>rustc</code> in the container. To
-achieve this, Hermeto sets <code>CARGO_RESOLVER_INCOMPATIBLE_RUST_VERSIONS=allow</code>
-when running <code>cargo vendor</code>.</p>
-<p><strong>Impact</strong>: None. Hermeto uses <code>cargo vendor --locked</code> which vendors the exact
-versions from your Cargo.lock file. Any MSRV-aware resolution choices you made
-when generating the lock file are fully preserved.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The only exception is PERMISSIVE mode when Cargo.lock is out-of-sync
-with Cargo.toml. In this case, Hermeto regenerates the lock file without
-MSRV-aware resolution, potentially selecting newer dependency versions than
-your <code>rust-version</code> supports.</p>
-</div>
+<h2 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
+<p>Some settings apply to every package manager. Others apply only to specific
+backends.</p>
+<h3 id="http"><code>http</code><a class="headerlink" href="#http" title="Permanent link">&para;</a></h3>
+<p>Applies to all package managers.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>connect_timeout</code></td>
+<td><code>30</code></td>
+<td>Connection timeout in seconds</td>
+</tr>
+<tr>
+<td><code>read_timeout</code></td>
+<td><code>300</code></td>
+<td>Read timeout in seconds; long downloads succeed while data flows</td>
+</tr>
+<tr>
+<td><code>max_retries</code></td>
+<td><code>5</code></td>
+<td>Maximum HTTP request retries</td>
+</tr>
+</tbody>
+</table>
+<h3 id="runtime"><code>runtime</code><a class="headerlink" href="#runtime" title="Permanent link">&para;</a></h3>
+<p>Applies to all package managers.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>concurrency_limit</code></td>
+<td><code>5</code></td>
+<td>Maximum concurrent operations</td>
+</tr>
+<tr>
+<td><code>subprocess_timeout</code></td>
+<td><code>3600</code></td>
+<td>Subprocess timeout in seconds</td>
+</tr>
+</tbody>
+</table>
+<h3 id="proxy-settings">Proxy settings<a class="headerlink" href="#proxy-settings" title="Permanent link">&para;</a></h3>
+<p>Applies to <code>bundler</code>, <code>cargo</code>, <code>gomod</code>, <code>npm</code>, <code>pnpm</code>, and <code>yarn</code> when pulling
+dependencies through an artifact repository manager (e.g. Sonatype Nexus or
+JFrog Artifactory). The primary use of <code>proxy_login</code> and <code>proxy_password</code> is
+to authenticate with such a registry. Set <code>proxy_url</code> to its base URL. Do not
+embed credentials in the URL.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>proxy_url</code></td>
+<td><em>(unset)</em></td>
+<td>Registry base URL</td>
+</tr>
+<tr>
+<td><code>proxy_login</code></td>
+<td><em>(unset)</em></td>
+<td>Registry username (must be set together with <code>proxy_password</code>)</td>
+</tr>
+<tr>
+<td><code>proxy_password</code></td>
+<td><em>(unset)</em></td>
+<td>Registry password (must be set together with <code>proxy_login</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bundler"><code>bundler</code><a class="headerlink" href="#bundler" title="Permanent link">&para;</a></h3>
+<p>Supports the <a href="#proxy-settings">proxy settings</a> above and has no additional
+keys. Only rubygems registry dependencies are proxied; git and path
+dependencies are unaffected.</p>
+<h3 id="gomod"><code>gomod</code><a class="headerlink" href="#gomod" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>download_max_tries</code></td>
+<td><code>5</code></td>
+<td>Maximum retry attempts for Go module commands</td>
+</tr>
+<tr>
+<td><code>environment_variables</code></td>
+<td><code>{}</code></td>
+<td>Default environment variables for the gomod backend</td>
+</tr>
+</tbody>
+</table>
+<p>Go supports the <a href="#proxy-settings">proxy settings</a> above. The default
+<code>proxy_url</code> is <code>https://proxy.golang.org,direct</code>. When <code>proxy_login</code> is set,
+<code>proxy_url</code> must be a single URL (not a comma-separated list).</p>
+<h3 id="pip"><code>pip</code><a class="headerlink" href="#pip" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ignore_dependencies_crates</code></td>
+<td><code>false</code></td>
+<td>Legacy option for Rust-based pip dependencies; do not rely on it</td>
+</tr>
+</tbody>
+</table>
+<h3 id="yarn"><code>yarn</code><a class="headerlink" href="#yarn" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enabled</code></td>
+<td><code>true</code></td>
+<td>Legacy toggle for Yarn v3 and v4 processing; do not rely on it</td>
+</tr>
+</tbody>
+</table>
+<p>Yarn v3 and v4 also support the <a href="#proxy-settings">proxy settings</a> above. Yarn
+Classic ignores this section.</p>
+<h3 id="cargo-npm-and-pnpm"><code>cargo</code>, <code>npm</code> and <code>pnpm</code><a class="headerlink" href="#cargo-npm-and-pnpm" title="Permanent link">&para;</a></h3>
+<p>These package managers support the <a href="#proxy-settings">proxy settings</a> above and
+have no additional keys.</p>
 
 
 
